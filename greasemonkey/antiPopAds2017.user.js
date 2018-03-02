@@ -5,9 +5,9 @@
 // @author       B Tasker
 // @match        *
 // @grant        none
-// @version 	 1.2
-// @downloadURL  https://www.bentasker.co.uk/adblock/greasemonkey/antiPopAds2017.js
-// @updateURL    https://www.bentasker.co.uk/adblock/greasemonkey/antiPopAds2017.js
+// @version 	 1.3
+// @downloadURL  https://www.bentasker.co.uk/adblock/greasemonkey/antiPopAds2017.user.js
+// @updateURL    https://www.bentasker.co.uk/adblock/greasemonkey/antiPopAds2017.user.js
 // ==/UserScript==
 
 /* PopAds can very seriously go fuck themselves */
