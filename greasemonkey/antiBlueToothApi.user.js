@@ -3,7 +3,7 @@
 // @namespace    *
 // @description  I've no need or interest in having the bluetooth API. Needs to be tested on an up-to-date Chrome to check whether this works
 // @author       B Tasker
-// @match        *
+// @match        *://*/*
 // @grant        none
 // @version 	 1.1
 // @downloadURL  https://www.bentasker.co.uk/adblock/greasemonkey/antiBlueToothApi.user.js
