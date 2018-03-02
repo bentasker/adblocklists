@@ -8,6 +8,10 @@ DATE=`date +'%Y%m%d%H%M'`
 DATE_FULL=`date`
 cd "$DIR"
 
+# Make sure we've got an up to date copy of the manual lists
+git pull
+
+
 cat << EOM > adblock_compiled.txt
 [Adblock Plus 2.0]
 ! Version: $DATE
