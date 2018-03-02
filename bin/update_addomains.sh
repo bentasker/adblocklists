@@ -5,7 +5,7 @@
 
 
 cd "$1"
-git pull
+
 wget -O autolist.txt "http://pgl.yoyo.org/adservers/serverlist.php?hostformat=unbound;showintro=0&mimetype=plaintext"
 wget -O minerdomains.txt https://raw.githubusercontent.com/Marfjeh/coinhive-block/master/domains 
 
