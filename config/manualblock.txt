@@ -1,0 +1,37 @@
+settings.crashlytics.com
+# cloud.rovio.com is blocked to disable ads in Angry Birds/Bad piggies but will also block free goodies :(
+# cloud.rovio.com
+www.highcpms.com
+ad.properllerads.com
+www.liveinternet.ru
+mobile-notifications.com
+static.crakbanner.com
+d38cp5x90nxyo0.cloudfront.net
+myimagetracking.com
+phone-alerts.com
+onclickads.net
+ads.reddit.com
+ads.yahoo.com
+audienceinsights.net
+hm.webtrends.com
+js-agent.newrelic.com
+traffic.alexa.com
+uk.ads.justpremium.com
+a.kickass.to
+assets.adobedtm.com
+go.netbet.co.uk
+www.rpczohkv.com
+bigdata.adups.com
+bigdata.adsunflower.com
+bigdata.adfuture.cn
+bigdata.advmob.cn
+pifaojvaiofw.com
+zxqeycvsetkh.com
+www.edutraderacademy.com
+adrunner.com
+adrunnr.com
+ad.kixer.com
+adxite-ads.com
+goconfigsync.3g.cn
+cdn.ampproject.org
+
