@@ -10,6 +10,6 @@
 // @updateURL    https://www.bentasker.co.uk/adblock/greasemonkey/antiBlueToothApi.user.js
 // ==/UserScript==
 
-Object.defineProperty(window.navigator, 'bluetooth', {value: function requestDevice {console.log('Bluetooth access attempt');}});
+Object.defineProperty(window.navigator, 'bluetooth', {value: function requestDevice(){console.log('Bluetooth access attempt');}});
 
 console.log("Loaded");
