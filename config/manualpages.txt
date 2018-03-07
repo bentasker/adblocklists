@@ -62,4 +62,4 @@ googletagservices.com/tag/js/gpt.js
 cdn.1337x.to/ip.php
 1337x.to/js/dddfaeabdccedecfb.js
 1337x.to/js/*
-
+browser-update.org/update.min.js
