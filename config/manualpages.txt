@@ -66,3 +66,5 @@ x1337x.ws/cdn-cgi/*
 x1337x.eu/js/*
 x1337x.eu/cdn-cgi/*
 browser-update.org/update.min.js
+central.freshworksapi.com/v1/analytics
+

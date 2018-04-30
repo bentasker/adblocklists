@@ -36,4 +36,6 @@ goconfigsync.3g.cn
 cdn.ampproject.org
 pingma.qq.com
 log.tbs.qq.com
+api.fdcollab.com
+analytics.inlinemanual.com
 
