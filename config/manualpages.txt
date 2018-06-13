@@ -67,5 +67,5 @@ x1337x.eu/js/*
 x1337x.eu/cdn-cgi/*
 browser-update.org/update.min.js
 central.freshworksapi.com/v1/analytics
-jps.evolok.net/acd/api/3.0/widgets/templates/paywall
+jps.evolok.net/*
 
