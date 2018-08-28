@@ -38,4 +38,6 @@ pingma.qq.com
 log.tbs.qq.com
 api.fdcollab.com
 analytics.inlinemanual.com
+syndication.twitter.com
+platform.twitter.com
 

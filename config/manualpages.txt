@@ -71,3 +71,4 @@ jps.evolok.net/*
 www.washingtonpost.com/pb/gr/f/embedded/page/adblocker-feature/render.js
 www.washingtonpost.com/pb/gr/f/embedded/page/adblocker-feature/style.css
 www.washingtonpost.com/pb/api/v2/render/feature/page/adblocker-feature?outputType=embedded&async=true
+
