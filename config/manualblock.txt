@@ -40,4 +40,5 @@ api.fdcollab.com
 analytics.inlinemanual.com
 syndication.twitter.com
 platform.twitter.com
+img1.wsimg.com
 
