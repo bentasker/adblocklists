@@ -69,7 +69,6 @@ do
 cat << EOM >> autolist.build.txt
 local-zone: "$domain" redirect
 local-data: "$domain A 127.0.0.1"
-local-data: "$domain IN AAAA ::1"
 EOM
 
 done
