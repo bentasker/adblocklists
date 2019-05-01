@@ -44,10 +44,12 @@ do
     echo "$domain" >> autolist.zones.txt
 done
 
-
+> blockeddomains.build.txt
 # Finally process the list, and use it to build the new autolist
 cat autolist.doms.txt | sort | uniq | egrep -v -e '^$' | while read -r domain
 do
+echo "$domain" >> blockeddomains.build.txt
+
 
 # Check if the domain exists within a zone that'll be blocked
 egrep -v -e "^${domain#*.}|^$domain" autolist.zones.txt > /dev/null
@@ -74,9 +76,11 @@ EOM
 done
 
 mv autolist.build.txt autolist.txt
+mv blockeddomains.build.txt blockeddomains.txt
+
 
 # Tidy up
-rm -f autolist.zones.txt autolist.doms.txt autolist.tmp.txt
+rm -f autolist.zones.txt autolist.doms.txt autolist.tmp.txt blockeddomains.build.txt
 
 
 "$1/bin/build_abp.sh"
