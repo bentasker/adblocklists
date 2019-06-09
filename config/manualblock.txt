@@ -49,4 +49,6 @@ sak.userreport.com
 visitanalytics.userreport.com
 cdn.userreport.com
 swa.metro.co.uk
+rta2.metro.co.uk
+crta.dailymail.co.uk
 
