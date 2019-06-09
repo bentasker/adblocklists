@@ -48,4 +48,5 @@ tracking.intl.miui.com
 sak.userreport.com
 visitanalytics.userreport.com
 cdn.userreport.com
+swa.metro.co.uk
 
