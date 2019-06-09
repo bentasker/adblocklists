@@ -51,4 +51,7 @@ cdn.userreport.com
 swa.metro.co.uk
 rta2.metro.co.uk
 crta.dailymail.co.uk
+and.co.uk.102.122.2o7.net
+metro.co.uk.102.122.2o7.net
+
 
