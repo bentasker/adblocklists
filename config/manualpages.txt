@@ -75,3 +75,5 @@ www.washingtonpost.com/pb/api/v2/render/feature/page/adblocker-feature?outputTyp
 rumble.com/embed/swap.js*
 rumble.com/embed/swap/q.js*
 www.bing.com/rewardsapp/reportActivity*
+www.thesun.co.uk/assets/client/ads*
+
