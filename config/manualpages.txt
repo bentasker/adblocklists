@@ -78,3 +78,4 @@ www.bing.com/rewardsapp/reportActivity*
 www.thesun.co.uk/assets/client/ads*
 news.google.com/*/browserinfo*
 play.google.com/log?format=json&hasfast=true
+cdn.ampproject.org/*
