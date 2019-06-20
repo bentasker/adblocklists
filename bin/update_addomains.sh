@@ -65,6 +65,7 @@ done
 
 # Block the various zones
 > zoneblocks.unbound.txt
+> blockedzones.txt
 cat autolist.zones.txt | sort | uniq | egrep -v -e '^$' | while read -r domain
 do
 
@@ -78,6 +79,9 @@ cat << EOM >> zoneblocks.unbound.txt
 local-zone: "$domain" redirect
 local-data: "$domain A 127.0.0.1"
 EOM
+
+echo "$domain" >> blockedzones.txt
+
 
 done
 
