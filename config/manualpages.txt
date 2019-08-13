@@ -79,3 +79,4 @@ www.thesun.co.uk/assets/client/ads*
 news.google.com/*/browserinfo*
 play.google.com/log?format=json&hasfast=true
 cdn.ampproject.org/*
+sp.ecosia.org/com.snowplowanalytics.snowplow/*
