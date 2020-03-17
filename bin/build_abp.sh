@@ -34,6 +34,10 @@ cat config/manualpages.txt | egrep -v -e '^#|^$' | sed -e 's/^/||/'  >> adblock_
 cat minerdomains.txt | egrep -v -e '^#|^$' | sed -e 's/^/||*./' | sed -e 's/$/^*/' >> adblock_compiled.txt
 
 
+# Create a copy without social media trackers appended
+cp adblock_compiled.txt adblock_compiled_no_sm.txt
+
+
 
 # Pull down the easylist and apply my overrides to it
 curl -o easylist_modified.tmp.txt https://easylist.to/easylist/easylist.txt
@@ -78,3 +82,31 @@ EOM
 # Install it in it's proper place
 cat easylist_modified.tmp.txt | grep -v '^$' >> easylist_modified.txt
 rm -f easylist_modified.tmp.txt
+
+
+# Create a copy of the list before we add social media trackers to it
+cp easylist_modified.txt easylist_modified_no_sm.txt
+
+
+# Create the social media tracker blocker
+cat << EOM > social_media_trackers.txt
+[Adblock Plus 2.0]
+! Version: $DATE
+! Title: B Tasker Social media trackers
+! Last modified: $DATE_FULL
+! Expires: 4 days (update frequency)
+! Homepage: https://www.bentasker.co.uk/adblock/
+! Licence: https://www.bentasker.co.uk/licensedetails
+! 
+! A modified version of easylist, incorporating additional domains I've blocked and with some exceptions removed
+! 
+! -----------------------General advert blocking filters-----------------------!
+! *** btasker:adblock/social_media_trackers.txt ***
+
+EOM
+
+cat config/social_media_trackers.txt | egrep -v -e '^#|^$' | sed -e 's/^/||/' | sed -e 's/$/^*/' >> social_media_trackers.txt
+cat config/social_media_trackers.txt | egrep -v -e '^#|^$' | sed -e 's/^/||/' | sed -e 's/$/^*/' >> adblock_compiled.txt
+cat config/social_media_trackers.txt | egrep -v -e '^#|^$' | sed -e 's/^/||/' | sed -e 's/$/^*/' >> easylist_modified.txt
+
+
