@@ -41,7 +41,6 @@ do
     echo "$domain" >> autolist.zones.txt
 done
 
-
 # Finally process the list, and use it to build the new autolist
 > blockeddomains.build.txt
 cat autolist.doms.txt | sort | uniq | egrep -v -e '^$' | while read -r domain
@@ -87,6 +86,17 @@ done
 
 mv autolist.build.txt autolist.txt
 mv blockeddomains.build.txt blockeddomains.txt
+
+
+# Check for any domains blocked in the social media list
+> blocked_domains_with_sm.build.txt
+egrep -v -e '/|\$' config/social_media_trackers.txt | egrep -v -e '^#' | sed 's/www\.//g' | while read -r domain
+do
+    echo "$domain" >> blocked_domains_with_sm.build.txt
+done
+
+cat blockeddomains.txt >> blocked_domains_with_sm.build.txt
+mv blocked_domains_with_sm.build.txt blocked_domains_with_sm.txt
 
 
 # Tidy up
