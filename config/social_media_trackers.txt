@@ -1,0 +1,9 @@
+platform.twitter.com/*
+connect.facebook.com/*
+platform.linkedin.com/in.js
+.facebook.com/impression.php/*
+.facebook.com/connect/ping*
+.facebook.com/plugins/like.php
+apis.google.com/js/plusone.js
+apis.google.com/js/client:plusone.js
+

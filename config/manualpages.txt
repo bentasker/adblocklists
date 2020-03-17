@@ -48,13 +48,6 @@ srv.bebi.com/a/1/170.js?
 .smaato.net/oapi/reqAd.jsp*
 .spoutable.com/e/unit/*
 engine.spoutable.com/api/*
-.facebook.com/plugins/like.php
-connect.facebook.net/*
-apis.google.com/js/plusone.js
-apis.google.com/js/client:plusone.js
-platform.linkedin.com/in.js
-.facebook.com/impression.php/*
-.facebook.com/connect/ping*
 googletagservices.com/tag/js/gpt.js
 cdn.1337x.to/ip.php
 1337x.to/js/*

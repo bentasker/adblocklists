@@ -38,7 +38,6 @@ log.tbs.qq.com
 api.fdcollab.com
 analytics.inlinemanual.com
 syndication.twitter.com
-platform.twitter.com
 img1.wsimg.com
 static.quantcast.mgr.consensu.org
 vendorlist.consensu.org
