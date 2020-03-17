@@ -1,5 +1,5 @@
-platform.twitter.com/*
-connect.facebook.com/*
+platform.twitter.com
+connect.facebook.com
 platform.linkedin.com/in.js
 .facebook.com/impression.php/*
 .facebook.com/connect/ping*
