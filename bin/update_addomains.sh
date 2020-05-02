@@ -28,6 +28,8 @@ do
 done
 
 
+
+
 # Iterate over the manualblocks
 for blockfile in config/manualblocks/*txt 
 do
@@ -108,6 +110,11 @@ done
 
 cat blockeddomains.txt >> blocked_domains_with_sm.build.txt
 mv blocked_domains_with_sm.build.txt blocked_domains_with_sm.txt
+
+
+# ADBLK-21: Publish the Regex List
+cat config/regexes/*txt | sort | uniq > regex_blocks.tmp
+mv regex_blocks.tmp regex_blocks.txt
 
 
 # Tidy up
