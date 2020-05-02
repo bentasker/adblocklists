@@ -13,3 +13,4 @@ auth.be.sec.intl.miui.com
 weatherapi.market.xioami.com
 resolver.msg.xiaomi.net
 data.mistat.rus.xiaomi.com
+tracking.intl.miui.com
