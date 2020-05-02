@@ -28,12 +28,13 @@ do
 done
 
 
-
-cat config/manualblock.txt | egrep -v -e '^#' | while read -r domain
-do
-    echo "$domain" >> autolist.doms.txt
+# Iterate over the manualblocks
+for blockfile in config/manualblocks/*txt;
+    cat $blockfile | egrep -v -e '^#' | while read -r domain
+    do
+        echo "$domain" >> autolist.doms.txt
+    done
 done
-
 
 # Truncate the existing file
 > autolist.zones.txt
