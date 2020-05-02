@@ -6,6 +6,8 @@ cd "$1"
 
 wget -O autolist.tmp.txt "http://pgl.yoyo.org/adservers/serverlist.php?hostformat=unbound;showintro=0&mimetype=plaintext"
 wget -O minerdomains.txt https://raw.githubusercontent.com/Marfjeh/coinhive-block/master/domains 
+wget -O xiaomidomains.txt https://gist.githubusercontent.com/unknownFalleN/3f38e2daa8a98caff1b0d965c2b89b25/raw
+
 
 # TODO - should move excludes into a dedicated file, but setting this up in a hurry
 sed -i 's/player.h-cdn.com/#player.h-cdn.com/g' minerdomains.txt
@@ -19,6 +21,13 @@ cat minerdomains.txt | egrep -v -e '^#|^$' | while read -r domain
 do
     echo "$domain" >> autolist.doms.txt
 done
+
+cat xiaomidomains.txt | egrep -v -e '^#' | while read -r domain
+do
+    echo "$domain" >> autolist.doms.txt
+done
+
+
 
 cat config/manualblock.txt | egrep -v -e '^#' | while read -r domain
 do
