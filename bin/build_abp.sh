@@ -28,7 +28,7 @@ cat << EOM > adblock_compiled.txt
 EOM
 
 
-cat config/manualblock.txt | egrep -v -e '^#|^$' | sed -e 's/^/||/' | sed -e 's/$/^*/' >> adblock_compiled.txt
+cat config/manualblocks/*.txt | egrep -v -e '^#|^$' | sed -e 's/^/||/' | sed -e 's/$/^*/' >> adblock_compiled.txt
 cat config/manualzones.txt | egrep -v -e '^#|^$' | sed -e 's/^/||*./' | sed -e 's/$/^*/' >> adblock_compiled.txt
 cat config/manualpages.txt | egrep -v -e '^#|^$' | sed -e 's/^/||/'  >> adblock_compiled.txt
 cat minerdomains.txt | egrep -v -e '^#|^$' | sed -e 's/^/||*./' | sed -e 's/$/^*/' >> adblock_compiled.txt
