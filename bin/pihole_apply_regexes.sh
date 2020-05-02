@@ -8,7 +8,14 @@
 # This is better than blocking upstream, as a block in FTL will
 # result in the adblock counter increasing
 #
-# Copyright (c) 2019 B Tasker
+#
+# Simplest setup:
+#
+# Save this file in root's home and configure in cron as follows
+#
+#  echo "0 */2 * * *    root    /root/pihole_apply_regexes.sh" | sudo tee /etc/cron.d/update_ads
+#
+# Copyright (c) 2020 B Tasker
 # Released under GNU GPL V3 - see https://www.gnu.org/licenses/gpl-3.0.txt
 # 
 #
