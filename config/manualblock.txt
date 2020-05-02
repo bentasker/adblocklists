@@ -713,4 +713,17 @@ zbwp6ghm.com
 zealousfield.com
 zlp6s.pw
 sa.api.intl.miui.com
+data.mistat.xiaomi.com
+data.mistat.intl.xiaomi.com
+ccc.sys.miui.com
+ccc.sys.intl.miui.com
+connect.rom.miui.com
+sdkconfig.ad.xiaomi.com
+sdkconfig.ad.intl.xiaomi.com
+api.sec.intl.miui.com
+api.sec.miui.com
+auth.be.sec.miui.com
+auth.be.sec.intl.miui.com
+weatherapi.market.xioami.com
+resolver.msg.xiaomi.net
 
