@@ -157,4 +157,9 @@ massivemark.com
 getadmiral.com
 pubexchange.com
 app.chat.xiaomi.net
+ad.intl.xiaomi.com
+ad.india.xiaomi.com
+ad.us.xiaomi.com
+ad.rus.xiaomi.com
+ad.xiaomi.com
 
