@@ -17,7 +17,7 @@ grep "local-zone" autolist.tmp.txt | cut -d\  -f2 | sed 's/"//g' > autolist.doms
 
 
 # Start compiling the autolist
-cat minerdomains.txt | egrep -v -e '^#|^$' | while read -r domain
+cat minerdomains.txt | egrep -v -e '^#|^$' | sed 's/igrid.org\^/igrid.org/' | while read -r domain
 do
     echo "$domain" >> autolist.doms.txt
 done
