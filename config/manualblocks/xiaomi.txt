@@ -14,3 +14,9 @@ weatherapi.market.xioami.com
 resolver.msg.xiaomi.net
 data.mistat.rus.xiaomi.com
 tracking.intl.miui.com
+tracking.miui.com
+tracking.us.miui.com
+tracking.rus.miui.com
+tracking.india.miui.com
+tracking.gb.miui.com
+
