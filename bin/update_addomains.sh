@@ -29,7 +29,8 @@ done
 
 
 # Iterate over the manualblocks
-for blockfile in config/manualblocks/*txt;
+for blockfile in config/manualblocks/*txt 
+do
     cat $blockfile | egrep -v -e '^#' | while read -r domain
     do
         echo "$domain" >> autolist.doms.txt
