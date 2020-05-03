@@ -2,5 +2,6 @@
 ^.+\.ad\..+\.xiaomi\.com$
 ^.+\.mistat\..+\.xiaomi\.com$
 ^adv\.sec\..+\.xiaomi.com$
+^resolver\.msg\..+\.xiaomi.net$
 
 
