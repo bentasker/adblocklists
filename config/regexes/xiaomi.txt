@@ -4,4 +4,5 @@
 ^adv\.sec\..+\.xiaomi.com$
 ^resolver\.msg\..+\.xiaomi.net$
 ^sa\.api\..\.miui\.com$
+^fr\.app\.chat\..+\.xiaomi\.net$
 
