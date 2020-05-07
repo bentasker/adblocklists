@@ -74,3 +74,4 @@ play.google.com/log?format=json&hasfast=true
 cdn.ampproject.org/*
 sp.ecosia.org/com.snowplowanalytics.snowplow/*
 www.dailymail.co.uk/static/mol-adverts/*
+https://www.facebook.com/tr/*
