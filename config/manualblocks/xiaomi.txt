@@ -19,4 +19,5 @@ tracking.us.miui.com
 tracking.rus.miui.com
 tracking.india.miui.com
 tracking.gb.miui.com
-
+fr-app-chat-global-xiaomi-net-1516654448.eu-central-1.elb.amazonaws.com
+fr-app-chat-intl-xiaomi-net-1516654448.eu-central-1.elb.amazonaws.com
