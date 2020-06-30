@@ -72,3 +72,4 @@ id.tinypass.com
 api-esp.piano.io
 cdn.pushassist.com
 guce.advertising.com
+ad.ettoday.net
