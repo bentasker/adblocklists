@@ -1,0 +1,4 @@
+adservice.google.com
+adservice.google.com.tw
+adservice.google.tw
+
