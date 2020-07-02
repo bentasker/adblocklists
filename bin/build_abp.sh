@@ -79,6 +79,10 @@ cat << EOM > easylist_modified.txt
 
 EOM
 
+
+# Add any whitelisting lines
+cat config/easylist_append_lines.txt | egrep -v -e '^#|^$' >> easylist_modified.tmp.txt
+
 # Install it in it's proper place
 cat easylist_modified.tmp.txt | grep -v '^$' >> easylist_modified.txt
 rm -f easylist_modified.tmp.txt
