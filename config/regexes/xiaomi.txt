@@ -5,4 +5,5 @@
 ^resolver\.msg\..+\.xiaomi.net$
 ^sa\.api\..\.miui\.com$
 ^fr\.app\.chat\..+\.xiaomi\.net$
+^fr-app-chat-.+-xiaomi-net.+\.elb\.amazonaws\.com$
 
