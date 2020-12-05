@@ -76,3 +76,5 @@ sp.ecosia.org/com.snowplowanalytics.snowplow/*
 www.dailymail.co.uk/static/mol-adverts/*
 www.facebook.com/tr/*
 www.newzit.com/setABframe*
+bank.barclays.co.uk/ftb/img/clarisite/*
+smetrics.barclays.co.uk/*
