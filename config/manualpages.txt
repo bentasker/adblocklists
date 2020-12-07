@@ -78,3 +78,6 @@ www.facebook.com/tr/*
 www.newzit.com/setABframe*
 bank.barclays.co.uk/ftb/img/clarisite/*
 smetrics.barclays.co.uk/*
+metrics-collector.s-onetag.com/*
+beacon.s-onetag.com/*
+
