@@ -4,6 +4,29 @@
 #
 # This script really needs tidying/refactoring
 
+
+function blockdomain(){
+domain=$1
+echo "$domain" >> blockeddomains.build.txt
+
+
+# Check if the domain exists within a zone that'll be blocked
+egrep -v -e "^${domain#*.}|^$domain" autolist.zones.txt > /dev/null
+if [ "$?" == "1" ]
+then
+
+cat << EOM >> autolist.build.txt
+local-data: "$domain A 127.0.0.1"
+local-data: "$domain IN AAAA ::1"
+EOM
+
+fi
+
+}
+
+
+
+
 cd "$1"
 
 wget -O autolist.tmp.txt "http://pgl.yoyo.org/adservers/serverlist.php?hostformat=unbound;showintro=0&mimetype=plaintext"
@@ -69,21 +92,7 @@ done
 > blockeddomains.build.txt
 cat autolist.doms.txt | sort | uniq | egrep -v -e '^$' | while read -r domain
 do
-    echo "$domain" >> blockeddomains.build.txt
-
-
-    # Check if the domain exists within a zone that'll be blocked
-    egrep -v -e "^${domain#*.}|^$domain" autolist.zones.txt > /dev/null
-    if [ "$?" == "1" ]
-    then
-
-cat << EOM >> autolist.build.txt
-local-data: "$domain A 127.0.0.1"
-local-data: "$domain IN AAAA ::1"
-EOM
-
-    fi
-
+    blockdomain $domain
 done
 
 # ADBLK-27 process CNAME tracker domains and add them to the blocked domains list
@@ -92,26 +101,10 @@ do
 
     grep '||' $f | tr -d '^|' | while read -r domain
     do
-
-        # This isn't very DRY, should move this do a function really
-        echo "$domain" >> blockeddomains.build.txt
-
-
-        # Check if the domain exists within a zone that'll be blocked
-        egrep -v -e "^${domain#*.}|^$domain" autolist.zones.txt > /dev/null
-        if [ "$?" == "1" ]
-        then
-
-cat << EOM >> autolist.build.txt
-local-data: "$domain A 127.0.0.1"
-local-data: "$domain IN AAAA ::1"
-EOM
-
-        fi
+        blockdomain $domain
     done
 
 done
-
 
 # Block the various zones
 > zoneblocks.unbound.txt
