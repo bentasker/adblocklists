@@ -1,6 +1,8 @@
 #!/bin/bash
 #
 # Update the ads domain list
+#
+# This script really needs tidying/refactoring
 
 cd "$1"
 
@@ -8,6 +10,15 @@ wget -O autolist.tmp.txt "http://pgl.yoyo.org/adservers/serverlist.php?hostforma
 wget -O minerdomains.txt https://raw.githubusercontent.com/Marfjeh/coinhive-block/master/domains 
 wget -O xiaomidomains.txt https://gist.githubusercontent.com/unknownFalleN/3f38e2daa8a98caff1b0d965c2b89b25/raw
 
+# Added in ADBLK-27
+if [ ! -d cname-trackers ]
+then
+    git clone https://github.com/AdguardTeam/cname-trackers
+else
+    cd cname-trackers
+    git pull
+    cd ..
+fi
 
 # TODO - should move excludes into a dedicated file, but setting this up in a hurry
 sed -i 's/player.h-cdn.com/#player.h-cdn.com/g' minerdomains.txt
@@ -74,6 +85,33 @@ EOM
     fi
 
 done
+
+# ADBLK-27 process CNAME tracker domains and add them to the blocked domains list
+for f in `find ./cname-trackers/trackers -name '*.txt'`
+do
+
+    grep '||' $f | tr -d '^|' | while read -r domain
+    do
+
+        # This isn't very DRY, should move this do a function really
+        echo "$domain" >> blockeddomains.build.txt
+
+
+        # Check if the domain exists within a zone that'll be blocked
+        egrep -v -e "^${domain#*.}|^$domain" autolist.zones.txt > /dev/null
+        if [ "$?" == "1" ]
+        then
+
+cat << EOM >> autolist.build.txt
+local-data: "$domain A 127.0.0.1"
+local-data: "$domain IN AAAA ::1"
+EOM
+
+        fi
+    done
+
+done
+
 
 # Block the various zones
 > zoneblocks.unbound.txt
