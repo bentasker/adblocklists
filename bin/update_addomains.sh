@@ -136,7 +136,9 @@ echo "$domain" >> blockedzones.txt
 done
 
 mv autolist.build.txt autolist.txt
-mv blockeddomains.build.txt blockeddomains.txt
+cat blockeddomains.build.txt | sort | uniq > blockeddomains.build.1.txt
+mv blockeddomains.build.1.txt blockeddomains.txt
+rm -f blockeddomains.build.txt
 
 
 # Check for any domains blocked in the social media list
