@@ -80,4 +80,5 @@ bank.barclays.co.uk/ftb/img/clarisite/*
 smetrics.barclays.co.uk/*
 metrics-collector.s-onetag.com/*
 beacon.s-onetag.com/*
+www.bowerroebuck.com/.quarantine/any.php
 
