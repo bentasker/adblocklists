@@ -81,4 +81,4 @@ smetrics.barclays.co.uk/*
 metrics-collector.s-onetag.com/*
 beacon.s-onetag.com/*
 www.bowerroebuck.com/.quarantine/any.php
-
+img1.wsimg.com/tcc/*
