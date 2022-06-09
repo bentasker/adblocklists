@@ -24,7 +24,18 @@
 	  bottom: 0px;
 	  width: 100%;
   }
+  
+    .deprecated {
+        color: red;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
 
+    .replaced {
+        color: orange;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
   #footer a {color: #0C0;}
   li a {color: #fff}
   h1 {font-size: 1.5em;}
@@ -34,49 +45,63 @@
 <body>
 <h1>Adblock Resources</h1>
 <hr />
-<p>Below are lists of ad-domains, with an Adblock Plus compatible block list of the domains I've had to manually block (the autolist isn't included as it'll likely be covered by other lists)</p>
-<p>As of March 2018, updates to the lists are managed in a Github Repo - <a href="https://github.com/bentasker/adblocklists">https://github.com/bentasker/adblocklists</a>.</p>
-<p> </p>
+<p>Below are lists of the domains I've had to manually block</p>
+<p>As of <a href="https://projects.bentasker.co.uk/gils_projects/issue/jira-projects/ADBLK/1.html" target=_blank rel=noopener>June 2022</a>, updates to the lists are managed in GILS - <a href="https://projects.bentasker.co.uk/gils_projects/project/jira-projects/ADBLK.html" target=_blank rel=noopener>https://projects.bentasker.co.uk/gils_projects/project/jira-projects/ADBLK.html</a> with the lists published <a href="https://github.com/bentasker/adblock_lists_v2/tree/master/lists" target=_blank rel=noopener>via Github</a>.</p>
+
+<hr />
+<h3>Lists</h3>
 <ul>
-<li><a href="autolist.txt">Full Autolist</a> (Unbound format)</li>
-<li><a href="config/manualzones.txt">Manually blocked zones</a> / <a href="zoneblocks.unbound.txt">Unbound format</a></li>
-<li><a href="adblock_compiled.txt">ABP/Ublock compatible list of blocked domains/zones</a></li>
-<li><a href="abp:subscribe?location=https://www.bentasker.co.uk/adblock/adblock_compiled.txt&amp;title=BTasker&amp;requiresLocation=https://www.bentasker.co.uk/adblock/adblock_compiled.txt&amp;requiresTitle=B Tasker">add Manual Blocks to ABP</a></li>
-<li><a href="adblock_compiled_no_sm.txt">ABP/Ublock compatible list of blocked domains/zones <b>without</b> Social Media tracker domains</a></li>
-<li><a href="abp:subscribe?location=https://www.bentasker.co.uk/adblock/adblock_compiled_no_sm.txt&amp;title=BTasker&amp;requiresLocation=https://www.bentasker.co.uk/adblock/adblock_compiled_no_sm.txt&amp;requiresTitle=B Tasker">add Manual Blocks (no SM) to ABP</a></li>
-<li><a href="easylist_modified.txt">Modified version of EasyList (ABP/Ublock compatible)</a></li>
-<li><a href="abp:subscribe?location=https://www.bentasker.co.uk/adblock/easylist_modified.txt&amp;title=BTasker&amp;requiresLocation=https://www.bentasker.co.uk/adblock/easylist_modified.txt&amp;requiresTitle=B Tasker Modified Easy List">add Modified Easylist Blocks to ABP</a></li>
-<li><a href="easylist_modified_no_sm.txt">Modified version of EasyList (ABP/Ublock compatible) <b>without</b> Social Media tracker domains</a></li>
-<li><a href="abp:subscribe?location=https://www.bentasker.co.uk/adblock/easylist_modified_no_sm.txt&amp;title=BTasker&amp;requiresLocation=https://www.bentasker.co.uk/adblock/easylist_modified_no_sm.txt&amp;requiresTitle=B Tasker Modified Easy List">add Modified Easylist Blocks (no SM) to ABP</a></li>
-<li><a href="social_media_trackers.txt">ABP compatible list of Social Media tracker domains</a></li>
-<li><a href="abp:subscribe?location=https://www.bentasker.co.uk/adblock/social_media_trackers.txt&amp;title=BTasker&amp;requiresLocation=https://www.bentasker.co.uk/adblock/social_media_trackers.txt&amp;requiresTitle=B Tasker Social Media Trackers">Add Social Media Trackers to ABP</a></li>
-
-
-
-<li><a href="blockeddomains.txt">Pi-Hole compatible blocklist</a></li>
-<li><a href="blocked_domains_with_sm.txt">Pi-Hole compatible blocklist <b>with</b> Social Media tracking domains</a></li>
+<li><a href="https://raw.githubusercontent.com/bentasker/adblock_lists_v2/master/lists/adblock_plus.txt">ABP/Ublock format list</a></li>
+<li><a href="https://raw.github.com/bentasker/adblock_lists_v2/master/lists/unbound.txt">Unbound Format List</a></li>
+<li><a href="https://raw.github.com/bentasker/adblock_lists_v2/master/lists/blockeddomains.txt">Domain List (Pihole etc)</a></li>
+<li><a href="https://raw.github.com/bentasker/adblock_lists_v2/master/lists/regexes.txt">List of regexes for blocking</a></li>
+<li><a href="https://raw.github.com/bentasker/adblock_lists_v2/master/lists/zones.txt">List of zones only</a></li>
+</ul>
 <br />
 <hr />
+
+
 <h3>PiHole</h3>
 <p>As well as the blocklists above, there are some additional tools/resources specifically intended for PiHole</p>
 <ul>
 <li><a href="https://www.bentasker.co.uk/blog/privacy/467-configuring-pi-hole-to-update-blocklists-more-regularly" target=_blank>Configuring Pihole to update blocklists more regularly</a></li>
-<li><a href="https://www.bentasker.co.uk/adblock/blockeddomains.txt" target=_blank>blockeddomains.txt</a> - a domain blocklist to add in <code>Settings</code> -&gt; <code>Blocklists</code></li>
-<li><a href="bin/pihole_apply_regexes.sh" target=_blank>pihole_apply_regexes.sh</a> (<a href="https://github.com/bentasker/adblocklists/blob/master/bin/pihole_apply_regexes.sh" target=_blank>On Github</a>) - a script to feed regex blocks into Pihole to block entire zones etc</li>
+<li><a href="https://raw.github.com/bentasker/adblock_lists_v2/master/lists/blockeddomains.txt" target=_blank>blockeddomains.txt</a> - a domain blocklist to add in <code>Settings</code> -&gt; <code>Blocklists</code></li>
+<li><a href="https://github.com/bentasker/adblocklists/blob/master/bin/pihole_apply_regexes.sh" target=_blank>pihole_apply_regexes.sh</a> - a script to feed regex blocks into Pihole to block entire zones etc</li>
 </ul>
 
+<br />
 
-<br />
-<hr />
-<br />
-<h1>Grease Monkey Scripts</h1>
-<p>I try to avoid resorting to Grease Monkey scripts as far as possible, unfortunately some advertiser's take extreme measures to try and bypass controls</p>
+</hr>
+
+
+<h3>Grease Monkey Scripts</h3>
+<p>I try to avoid resorting to Grease Monkey scripts as far as possible, unfortunately some advertisers take extreme measures to try and bypass controls</p>
 
 <li><a href="greasemonkey/antiPopAds2017.user.js">Anti PopAds</a></li>
 <li><a href="greasemonkey/antiBlueToothApi.user.js">Anti Bluetooth API</a></li>
 <li><a href="greasemonkey/antiWebUSB.user.js">Anti WebUSB</a></li>
 
 </ul>
+
+<br />
+<hr />
+
+<h3>Old Lists</h3>
+<p> </p>
+<ul>
+<li><a href="autolist.txt">Full Autolist</a> (Unbound format) <span class="replaced">replaced</a></li>
+<li><a href="config/manualzones.txt">Manually blocked zones</a> / <a href="zoneblocks.unbound.txt">Unbound format</a> <span class="replaced">replaced</a></li>
+<li><a href="adblock_compiled.txt">ABP/Ublock compatible list of blocked domains/zones</a> <span class="replaced">replaced</a></li>
+<li><a href="adblock_compiled_no_sm.txt">ABP/Ublock compatible list of blocked domains/zones <b>without</b> Social Media tracker domains</a> <span class="deprecated">deprecated</span></li>
+<li><a href="easylist_modified.txt">Modified version of EasyList (ABP/Ublock compatible)</a> <span class="deprecated">deprecated</span></li>
+<li><a href="easylist_modified_no_sm.txt">Modified version of EasyList (ABP/Ublock compatible) <b>without</b> Social Media tracker domains</a> <span class="deprecated">deprecated</span></li>
+<li><a href="social_media_trackers.txt">ABP compatible list of Social Media tracker domains</a> <span class="deprecated">deprecated</span></li>
+<li><a href="blockeddomains.txt">Pi-Hole compatible blocklist</a> <span class="replaced">replaced</a></li>
+<li><a href="blocked_domains_with_sm.txt">Pi-Hole compatible blocklist <b>with</b> Social Media tracking domains</a> <span class="deprecated">deprecated</span></li>
+</ul>
+<br />
+<hr />
+
 
 </body>
 </html>
