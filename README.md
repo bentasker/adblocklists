@@ -1,6 +1,16 @@
 Adblock lists
 ===============
 
+### Deprecated
+
+This repository has been deprecated (see [jira-projects/ADBLK#1](https://projects.bentasker.co.uk/gils_projects/issue/jira-projects/ADBLK/1.html)) and is preserved only for posterity.
+
+The replacement repository at [https://github.com/bentasker/adblock_lists_v2](https://github.com/bentasker/adblock_lists_v2) should be used instead.
+
+
+
+----
+
 I've been using my own amended version of EasyList for quite a while in my adblocker, and also block various ad domains at the DNS level. Changes to Easylist tend to be either overriding things they've whitelisted, or adding domains that are not yet included (and in some cases, may never be).
 
 This repo houses both the scripts used to generate the lists as well as the configuration files. 
